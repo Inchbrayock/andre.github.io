@@ -1,0 +1,193 @@
+* {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: nexa;
+}
+
+header {
+	position: fixed;
+	z-index: 9999;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 1% 3%;
+	box-sizing: border-box;
+}
+
+header img {
+	width: 300px;
+}
+
+header img:hover {
+	cursor: pointer;
+}
+
+.headerItems p {
+	transition: 0.5s;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.headerItems p:hover {
+	cursor: pointer;
+	color: #ff0000;
+}
+
+.headerItems p::after {
+	content: "";
+	width: 0px;
+	height: 1px;
+	display: block;
+	background: white;
+	transition: 300ms;
+}
+
+.headerItems p:hover::after {
+	width: 100%;
+}
+
+.backgroundContainer {
+	position: fixed;
+	z-index: 9998;
+	height: 947px;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.typingText {
+	text-align: center;
+	white-space: ellipsis;
+	overflow: hidden;
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+
+.element {
+	color: #ff0000;
+}
+
+.centreButtons {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.centreButtons button {
+	margin-right: 30px;
+	position: relative;
+	z-index: 1;
+	background-color: transparent;
+	border-radius: 25px;
+	border: solid #ff0000 2px;
+	width: 250px;
+	height: 50px;
+	cursor: pointer;
+	overflow: hidden;
+	transition: background-color 0.5s ease-out;
+}
+
+.centreButtons button:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ff0000;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.5s ease-out;
+	border-radius: 25px;
+}
+
+.centreButtons button:hover:before {
+	transform: scaleX(1);
+}
+
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#photo {
+	width: auto;
+	height: 947px;
+	background-size: cover;
+}
+
+@media (max-width: 730px) {
+	header img {
+		width: 35vw;
+	}
+	.headerItems {
+		font-size: 2vw;
+	}
+
+	.typingText {
+		font-size: 3.8vw;
+	}
+
+	.centreButtons button {
+		margin-right: 10px;
+		margin-bottom: 10px;
+		width: 24vw;
+		height: 6.5vw;
+	}
+	#photo {
+		height: 100vh;
+	}
+
+	.backgroundContainer {
+		height: 100%;
+	}
+}
+
+@media (max-width: 430px) {
+	header img {
+		width: 60vw;
+	}
+	.headerItems {
+		font-size: 3.5vw;
+	}
+
+	.typingText {
+		font-size: 28px;
+		font-size: 6.5vw;
+	}
+
+	.centreButtons button {
+		margin-right: 10px;
+		margin-bottom: 10px;
+		width: 40vw;
+		height: 11vw;
+	}
+	#photo {
+		height: 100vh;
+	}
+
+	.backgroundContainer {
+		height: 100%;
+	}
+}

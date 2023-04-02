@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Mario</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+		/>
+	</head>
+
+	<body>
+		<header>
+			<img src="logoFinalV2.png" alt="" />
+			<div class="headerItems">
+				<p>ABOUT ME</p>
+				<p>MY PORTFOLIO</p>
+				<p>CONTACT ME</p>
+			</div>
+		</header>
+		<div class="backgroundContainer">
+			<h1 class="typingText">
+				I can improve your <span class="element"></span>
+			</h1>
+			<div class="centreButtons">
+				<button>ABOUT ME</button>
+				<button>CONTACT ME</button>
+			</div>
+		</div>
+
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div
+					class="swiper-slide"
+					id="photo"
+					style="
+						background-image: linear-gradient(
+								rgba(0, 0, 0, 0.5),
+								rgba(0, 0, 0, 0.5)
+							),
+							url('bathroom.jpg');
+					"
+				></div>
+				<div
+					class="swiper-slide"
+					id="photo"
+					style="
+						background-image: linear-gradient(
+								to top,
+								rgba(0, 0, 0, 0.5),
+								rgba(0, 0, 0, 0.5)
+							),
+							url('bathroom2.jpg');
+					"
+				></div>
+			</div>
+		</div>
+
+		<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+		<script>
+			var typed = new Typed(".element", {
+				strings: ["bathroom.", "kitchen.", "bedroom.", "living room."],
+				typeSpeed: 60,
+				backSpeed: 60,
+				loop: true,
+			});
+		</script>
+
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+				autoplay: {
+					delay: 3000,
+				},
+				speed: 1000, // Set the speed to 1000ms (1 second)
+			});
+		</script>
+		<script src="script.js"></script>
+	</body>
+</html>
